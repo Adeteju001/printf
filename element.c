@@ -34,3 +34,19 @@ int print_number(va_list args)
 	}
 	return (len);
 }
+
+/**
+ * p_char - print integer
+ * @args: an int
+ * Return: the result
+ */
+
+int p_char(va_list args)
+{
+	char value;
+
+	value = va_arg(args, int)
+
+		my_putchar(value);
+	return (1);
+}
