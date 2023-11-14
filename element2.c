@@ -25,7 +25,7 @@ int p_string(va_list args)
  * @args: an int
  * Return: the result
  */
-int p_percent (__attribute__((unused)) va_list args)
+int p_percent(__attribute__((unused)) va_list args)
 {
 	my_putchar('%');
 	return (1);

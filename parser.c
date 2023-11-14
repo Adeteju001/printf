@@ -5,9 +5,8 @@
  * @format: a constant
  * @funct_list: a member
  * @args: an int
- * Return: the insult
+ * Return: the result
  */
-
 int parser(const char *format, conver_t funct_list[], va_list args)
 {
 	int i, j, r_val, printed_chars;

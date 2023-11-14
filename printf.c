@@ -8,7 +8,6 @@
  */
 int _printf(const char *format, ...)
 {
-
 	int printed_chars;
 	conver_t funct_list[] = {
 		{"c", p_char},
@@ -16,12 +15,16 @@ int _printf(const char *format, ...)
 		{"%", p_percent},
 		{"d", p_integer},
 		{"i", p_integer},
+		{"u", p_unsigned_integer},
+		{"o", p_unsigned_oct},
+		{"x", p_hexadecimal},
+		{"X", p_hexadecimal},
 		{NULL, NULL}
 	};
 
 	va_list args;
 
-	if(format == NULL)
+	if (format == NULL)
 		return (-1);
 	va_start(args, format);
 

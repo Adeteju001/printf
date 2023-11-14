@@ -41,23 +41,23 @@ int print_number(va_list args)
  */
 int print_unsigned_number(unsigned int n)
 {
-    	int check;
-    	int len;
-    	unsigned int num;
+	int check;
+	int len;
+	unsigned int num;
 
-    	check = 1;
-    	len = 0;
-    	num = n;
+	check = 1;
+	len = 0;
+	num = n;
 
-    	for (; num / check > 9;)
-            	check *= 10;
-    	for (; check != 0;)
-    	{
-            	len += my_putchar('0' + num / check);
-            	num %= check;
-            	check /= 10;
-    	}
-    	return (len);
+	for (; num / check > 9;)
+		check *= 10;
+	for (; check != 0;)
+	{
+		len += my_putchar('0' + num / check);
+		num %= check;
+		check /= 10;
+	}
+	return (len);
 }
 
 /**
@@ -67,10 +67,10 @@ int print_unsigned_number(unsigned int n)
  */
 int p_char(va_list args)
 {
-    	char value;
+	char value;
 
-    	value = va_arg(args, int);
+	value = va_arg(args, int);
 
-    	my_putchar(value);
-    	return (1);
+	my_putchar(value);
+	return (1);
 }
