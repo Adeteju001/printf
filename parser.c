@@ -13,7 +13,7 @@ int parser(const char *format, conver_t funct_list[], va_list args)
 	int i, j, r_val, printed_chars;
 
 	printed_chars = 0;
-	for (i = 0; format[i] != '/0', i++)
+	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
 		{
@@ -28,9 +28,9 @@ int parser(const char *format, conver_t funct_list[], va_list args)
 					break;
 				}
 			}
-			if (funct_list[j].sym == NULL && format[i + 1] != '')
+			if (funct_list[j].sym == NULL && format[i + 1] != ' ')
 			{
-				if (format[i + 1] != '/0')
+				if (format[i + 1] != '\0')
 				{
 					my_putchar(format[i]);
 					my_putchar(format[i + 1]);
